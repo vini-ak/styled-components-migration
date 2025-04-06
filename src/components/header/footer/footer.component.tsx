@@ -1,10 +1,10 @@
-import * as Styles from "./footer.styles";
+import styles from "./footer.module.scss";
 
 export const Footer = () => {
     return (
-      <Styles.FooterContainer>
+      <footer className={styles["footer-container"]}>
         &copy; {new Date().getFullYear()} MinhaLoja. Todos os direitos reservados.
-      </Styles.FooterContainer>
+      </footer>
     );
   };
   

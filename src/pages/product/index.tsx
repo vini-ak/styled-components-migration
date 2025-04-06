@@ -1,4 +1,4 @@
-import * as Styles from "./styles";
+import styles from "./product-page.module.scss";
 
 export const ProductPage = () => {
     const product = {
@@ -10,16 +10,16 @@ export const ProductPage = () => {
     };
   
     return (
-      <Styles.Container>
-        <Styles.ImageWrapper>
-          <Styles.ProductImage src={product.image} alt={product.name} />
-        </Styles.ImageWrapper>
-        <Styles.Info>
-          <Styles.ProductName>{product.name}</Styles.ProductName>
-          <Styles.ProductPrice>{product.price}</Styles.ProductPrice>
-          <Styles.Description>{product.description}</Styles.Description>
-          <Styles.AddToCartButton>Adicionar ao carrinho</Styles.AddToCartButton>
-        </Styles.Info>
-      </Styles.Container>
+      <div className={styles["container"]}>
+        <div className={styles["image-wrapper"]}>
+          <img className={styles["product-image"]} src={product.image} alt={product.name} />
+        </div>
+        <div className={styles["info"]}>
+          <h1 className={styles["product-name"]}>{product.name}</h1>
+          <p className={styles["product-price"]}>{product.price}</p>
+          <p className={styles["description"]}>{product.description}</p>
+          <button className={styles["add-to-cart-button"]}>Adicionar ao carrinho</button>
+        </div>
+      </div>
     );
   };

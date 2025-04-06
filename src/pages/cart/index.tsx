@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import * as Styles from "./styles";
+import styles from "./cart-page.module.scss";
 
 export const CartPage = () => {
     const cartItems = useMemo(() => {
@@ -20,20 +20,20 @@ export const CartPage = () => {
     }, []);
 
     return (
-      <Styles.Container>
-        <Styles.Title>Seu Carrinho</Styles.Title>
-        <Styles.CartList>
+      <div className={styles["container"]}>
+        <h1 className={styles["title"]}>Seu Carrinho</h1>
+        <div className={styles["cart-list"]}>
           {cartItems.map((item) => (
-            <Styles.CartItem key={item.id}>
-              <Styles.ProductImage src={item.image} alt={item.name} />
-              <Styles.Info>
-                <Styles.Name>{item.name}</Styles.Name>
-                <Styles.Price>{item.price}</Styles.Price>
-              </Styles.Info>
-            </Styles.CartItem>
+            <div className={styles["cart-item"]} key={item.id}>
+              <img className={styles["product-image"]} src={item.image} alt={item.name} />
+              <div className={styles["info"]}>
+                <h2 className={styles["name"]}>{item.name}</h2>
+                <p className={styles["price"]}>{item.price}</p>
+              </div>
+            </div>
           ))}
-        </Styles.CartList>
-        <Styles.Total>Total: R$ 289,80</Styles.Total>
-      </Styles.Container>
+        </div>
+        <div className={styles["total"]}>Total: R$ 289,80</div>
+      </div>
     );
   };

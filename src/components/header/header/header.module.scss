@@ -1,0 +1,30 @@
+.header-container {
+    background-color: $color-primary;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.logo {
+    font-size: $font-size-lg;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: $font-size-rg;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+}
