@@ -5,7 +5,7 @@ export const HomePage = () => {
     return (
       <div className={styles["container"]}>
         <h1 className={styles["title"]}>Produtos</h1>
-        <div className={styles["products-grid"]}>
+        <div className={styles["product-grid"]}>
           {products.map((product) => (
             <div className={styles["product-card"]} key={product.id}>
               <img className={styles["product-image"]} src={product.image} alt={product.name} />
